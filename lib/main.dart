@@ -12,6 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My App",
       home: HomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        brightness: Brightness.dark,
+        accentColor: Colors.deepPurpleAccent,
+      ),
     );
   }
 }
@@ -43,7 +48,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(myText,style: TextStyle(fontSize: 30),),
+            Text(
+              myText,
+              style: TextStyle(fontSize: 30),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
