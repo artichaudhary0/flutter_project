@@ -41,13 +41,22 @@ class _HomePageState extends State<HomePage> {
       padding: EdgeInsets.all(8.0),
       child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(myText),
-            ElevatedButton(
-              onPressed: () {
-                _changeText();
-              },
-              child: Text("Clicked"),
+            Text(myText,style: TextStyle(fontSize: 30),),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                onPressed: () {
+                  _changeText();
+                },
+                child: Text(
+                  "Click Me",
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
