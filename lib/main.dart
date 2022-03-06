@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         accentColor: Colors.deepPurpleAccent,
       ),
     );
@@ -52,20 +53,6 @@ class _HomePageState extends State<HomePage> {
               myText,
               style: TextStyle(fontSize: 30),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                onPressed: () {
-                  _changeText();
-                },
-                child: Text(
-                  "Click Me",
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),
@@ -79,6 +66,12 @@ class _HomePageState extends State<HomePage> {
         title: Text("Home Page"),
       ),
       body: _bodyWidget(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _changeText();
+        },
+        child: Icon(CupertinoIcons.add),
+      ),
     );
   }
 }
